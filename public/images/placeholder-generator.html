@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Placeholders - Pavistamp Desing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        h1 {
+            color: #2563EB;
+        }
+        .info {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .placeholder-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .placeholder-item {
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .placeholder-item h3 {
+            margin-top: 0;
+            color: #0F172A;
+        }
+        .placeholder-preview {
+            width: 100%;
+            height: 200px;
+            background: #e5e7eb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            color: #6b7280;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        button {
+            background: #2563EB;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        button:hover {
+            background: #1d4ed8;
+        }
+        .note {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🖼️ Generador de Imágenes Placeholder</h1>
+    
+    <div class="info">
+        <h2>Instrucciones</h2>
+        <p>Esta página te ayuda a crear imágenes placeholder temporales para la web de Pavistamp Desing.</p>
+        <p><strong>Para usar las imágenes reales:</strong></p>
+        <ol>
+            <li>Prepara tus fotos según las especificaciones en <code>PLACEHOLDER_INFO.md</code></li>
+            <li>Optimiza las imágenes (TinyPNG, Squoosh)</li>
+            <li>Colócalas en las carpetas correspondientes en <code>/public/images/</code></li>
+        </ol>
+    </div>
+
+    <div class="note">
+        <strong>⚠️ Importante:</strong> Estas son imágenes temporales. Reemplázalas con fotos reales de tus proyectos antes del lanzamiento.
+    </div>
+
+    <h2>Placeholders Disponibles</h2>
+
+    <div class="placeholder-grid">
+        <div class="placeholder-item">
+            <h3>Hero Principal</h3>
+            <div class="placeholder-preview">
+                <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="100%" height="100%" fill="#2563EB"/>
+                    <text x="50%" y="40%" text-anchor="middle" fill="white" font-size="24" font-weight="bold">Pavistamp</text>
+                    <text x="50%" y="50%" text-anchor="middle" fill="#e5e7eb" font-size="14">Piscinas y Pavimento</text>
+                    <text x="50%" y="60%" text-anchor="middle" fill="#e5e7eb" font-size="12">1920x1080</text>
+                </svg>
+            </div>
+            <p><strong>Archivo:</strong> hero-piscina.jpg</p>
+            <p><strong>Tamaño:</strong> 1920x1080</p>
+            <button onclick="downloadPlaceholder('hero-piscina', 1920, 1080, 'Hero - Pavistamp Desing')">Descargar</button>
+        </div>
+
+        <div class="placeholder-item">
+            <h3>Piscinas</h3>
+            <div class="placeholder-preview" style="background: linear-gradient(135deg, #0EA5E9 0%, #2563EB 100%);">
+                <text style="color: white; font-size: 18px;">Piscinas de Obra</text>
+            </div>
+            <p><strong>Archivo:</strong> services/piscinas.jpg</p>
+            <p><strong>Tamaño:</strong> 800x600</p>
+            <button onclick="downloadPlaceholder('services-piscinas', 800, 600, 'Piscinas de Obra')">Descargar</button>
+        </div>
+
+        <div class="placeholder-item">
+            <h3>Pavimento Impreso</h3>
+            <div class="placeholder-preview" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
+                <text style="color: white; font-size: 18px;">Pavimento Impreso</text>
+            </div>
+            <p><strong>Archivo:</strong> services/pavimento-impreso.jpg</p>
+            <p><strong>Tamaño:</strong> 800x600</p>
+            <button onclick="downloadPlaceholder('services-pavimento', 800, 600, 'Pavimento Impreso')">Descargar</button>
+        </div>
+
+        <div class="placeholder-item">
+            <h3>Muros y Fachadas</h3>
+            <div class="placeholder-preview" style="background: linear-gradient(135deg, #64748b 0%, #475569 100%);">
+                <text style="color: white; font-size: 18px;">Muros y Fachadas</text>
+            </div>
+            <p><strong>Archivo:</strong> services/muros-fachadas.jpg</p>
+            <p><strong>Tamaño:</strong> 800x600</p>
+            <button onclick="downloadPlaceholder('services-muros', 800, 600, 'Muros y Fachadas')">Descargar</button>
+        </div>
+
+        <div class="placeholder-item">
+            <h3>Reformas Exteriores</h3>
+            <div class="placeholder-preview" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+                <text style="color: white; font-size: 18px;">Reformas Exteriores</text>
+            </div>
+            <p><strong>Archivo:</strong> services/reformas-exteriores.jpg</p>
+            <p><strong>Tamaño:</strong> 800x600</p>
+            <button onclick="downloadPlaceholder('services-reformas', 800, 600, 'Reformas Exteriores')">Descargar</button>
+        </div>
+    </div>
+
+    <div class="info" style="margin-top: 30px;">
+        <h2>📝 Fuentes de Imágenes Reales Gratuitas</h2>
+        <ul>
+            <li><strong>Unsplash:</strong> <a href="https://unsplash.com/s/photos/swimming-pool" target="_blank">unsplash.com</a></li>
+            <li><strong>Pexels:</strong> <a href="https://www.pexels.com/search/pool/" target="_blank">pexels.com</a></li>
+            <li><strong>Pixabay:</strong> <a href="https://pixabay.com/es/images/search/piscina/" target="_blank">pixabay.com</a></li>
+        </ul>
+        <p><strong>Búsquedas sugeridas:</strong> "outdoor pool", "stamped concrete", "swimming pool construction", "concrete driveway"</p>
+    </div>
+
+    <script>
+        function downloadPlaceholder(name, width, height, text) {
+            const canvas = document.createElement('canvas');
+            canvas.width = width;
+            canvas.height = height;
+            const ctx = canvas.getContext('2d');
+            
+            // Fondo degradado
+            const gradient = ctx.createLinearGradient(0, 0, width, height);
+            if (name.includes('hero')) {
+                gradient.addColorStop(0, '#2563EB');
+                gradient.addColorStop(1, '#1d4ed8');
+            } else if (name.includes('piscinas')) {
+                gradient.addColorStop(0, '#0EA5E9');
+                gradient.addColorStop(1, '#2563EB');
+            } else if (name.includes('pavimento')) {
+                gradient.addColorStop(0, '#f59e0b');
+                gradient.addColorStop(1, '#d97706');
+            } else if (name.includes('muros')) {
+                gradient.addColorStop(0, '#64748b');
+                gradient.addColorStop(1, '#475569');
+            } else {
+                gradient.addColorStop(0, '#10b981');
+                gradient.addColorStop(1, '#059669');
+            }
+            
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, width, height);
+            
+            // Texto
+            ctx.fillStyle = 'white';
+            ctx.textAlign = 'center';
+            ctx.font = 'bold ' + (width > 1000 ? '48px' : '24px') + ' Arial';
+            ctx.fillText(text, width/2, height/2 - 20);
+            
+            ctx.font = (width > 1000 ? '24px' : '14px') + ' Arial';
+            ctx.fillStyle = 'rgba(255,255,255,0.7)';
+            ctx.fillText(width + 'x' + height, width/2, height/2 + 20);
+            
+            ctx.fillText('Pavistamp Desing', width/2, height/2 + 50);
+            
+            // Descargar
+            canvas.toBlob(function(blob) {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = name + '.jpg';
+                a.click();
+                URL.revokeObjectURL(url);
+            }, 'image/jpeg', 0.9);
+        }
+    </script>
+</body>
+</html>
