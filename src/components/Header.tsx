@@ -4,16 +4,6 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Phone } from 'lucide-react';
 
-const navigation = [
-  { name: 'Inicio', href: '/' },
-  { name: 'Servicios', href: '/servicios' },
-  { name: 'Proyectos', href: '/proyectos' },
-  { name: 'Antes y Después', href: '/antes-despues' },
-  { name: 'Reseñas', href: '/resenas' },
-  { name: 'Empresa', href: '/empresa' },
-  { name: 'Contacto', href: '/contacto' },
-];
-
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
 
@@ -45,20 +35,11 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex lg:items-center lg:space-x-1">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="rounded-md px-3 py-2 text-sm font-medium text-dark hover:bg-background hover:text-primary transition-colors"
-              >
-                {item.name}
-              </Link>
-            ))}
+          {/* Desktop CTA */}
+          <div className="hidden lg:flex lg:items-center">
             <Link
-              href="/contacto"
-              className="ml-4 inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-semibold text-white hover:bg-primary/90 transition-colors"
+              href="#contacto"
+              className="inline-flex items-center rounded-md bg-primary px-6 py-2.5 text-sm font-semibold text-white hover:bg-primary/90 transition-colors"
             >
               <Phone className="mr-2 h-4 w-4" />
               Pedir presupuesto
