@@ -295,24 +295,24 @@ export default function ProjectCarousel({ category, images }: ProjectCarouselPro
         <button
           onClick={() => scroll('left')}
           disabled={currentIndex === 0}
-          className={`absolute left-4 top-1/2 -translate-y-1/2 z-50 w-8 h-8 rounded-full bg-white/95 shadow-xl flex items-center justify-center transition-all hover:scale-110 ${
+          className={`absolute left-4 top-1/2 -translate-y-1/2 z-50 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/95 shadow-xl flex items-center justify-center transition-all hover:scale-110 ${
             currentIndex === 0 ? 'opacity-50 cursor-not-allowed' : 'opacity-100 hover:bg-white'
           }`}
           aria-label="Anterior"
         >
-          <ChevronLeft className="w-4 h-4 text-primary" />
+          <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-primary" />
         </button>
 
         {/* Botón Derecha - SIEMPRE VISIBLE */}
         <button
           onClick={() => scroll('right')}
           disabled={currentIndex === images.length - 1}
-          className={`absolute right-4 top-1/2 -translate-y-1/2 z-50 w-8 h-8 rounded-full bg-white/95 shadow-xl flex items-center justify-center transition-all hover:scale-110 ${
+          className={`absolute right-4 top-1/2 -translate-y-1/2 z-50 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/95 shadow-xl flex items-center justify-center transition-all hover:scale-110 ${
             currentIndex === images.length - 1 ? 'opacity-50 cursor-not-allowed' : 'opacity-100 hover:bg-white'
           }`}
           aria-label="Siguiente"
         >
-          <ChevronRight className="w-4 h-4 text-primary" />
+          <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-primary" />
         </button>
 
         {/* Indicadores de posición - SIEMPRE VISIBLES */}

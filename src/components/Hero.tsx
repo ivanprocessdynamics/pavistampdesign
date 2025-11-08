@@ -2,16 +2,20 @@
 
 import { Phone, MessageCircle, Star, Users, ShieldCheck, Clock } from 'lucide-react';
 import { CONTACT_INFO } from '@/lib/constants';
+import Image from 'next/image';
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-20">
       {/* Imagen de fondo con overlay mejorado */}
       <div className="absolute inset-0 z-0">
-        <img
+        <Image
           src="/hero.png"
           alt="Piscina y pavimento impreso en Cataluña"
-          className="w-full h-full object-cover"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
         />
         {/* Degradado mejorado para mejor contraste sin oscurecer todo */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-transparent" />
