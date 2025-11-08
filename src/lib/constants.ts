@@ -1,7 +1,7 @@
 export const CONTACT_INFO = {
   phone: '+34678018895',
   phoneDisplay: '678 01 88 95',
-  whatsappUrl: 'https://wa.me/34678018895?text=Hola%20Pavistamp%20Desing,%20quisiera%20un%20presupuesto.',
+  whatsappUrl: 'https://wa.me/34678018895',
   email: 'info@pavistampdesing.com',
   contactName: 'Iván',
   location: 'Cataluña',
