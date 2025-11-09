@@ -34,7 +34,8 @@ export default function HomePage() {
         '/Piscina13.png',
         '/Piscina14.png',
         '/Piscina15.png',
-        { src: '/Video3.mp4', type: 'video' as const }, // Video 3 después de Piscina 15
+        '/Piscina16.png',
+        { src: '/Video3.mp4', type: 'video' as const }, // Video 3 después de Piscina 16
       ],
     },
     {
@@ -56,9 +57,11 @@ export default function HomePage() {
       images: [
         '/Muros_Fachadas1.png',
         '/Muros_Fachadas2.png',
-        { src: '/Video4.mp4', type: 'video' as const }, // Video 4 después de Muros fachadas 2
         '/Muros_Fachadas3.png',
         '/Muros_Fachadas4.png',
+        { src: '/Video4.mp4', type: 'video' as const }, // Video 4 después de Muros fachadas 4
+        '/Muros_Fachadas5.png',
+        '/Muros_Fachadas6.png',
       ],
     },
   ];
