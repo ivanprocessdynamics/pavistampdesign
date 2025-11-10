@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Phone } from 'lucide-react';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -35,16 +34,7 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Desktop CTA */}
-          <div className="hidden lg:flex lg:items-center">
-            <Link
-              href="#contacto"
-              className="inline-flex items-center rounded-md bg-primary px-6 py-2.5 text-sm font-semibold text-white hover:bg-primary/90 transition-colors"
-            >
-              <Phone className="mr-2 h-4 w-4" />
-              Pedir presupuesto
-            </Link>
-          </div>
+          
 
         </div>
       </nav>

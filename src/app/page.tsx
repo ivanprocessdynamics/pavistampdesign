@@ -50,6 +50,9 @@ export default function HomePage() {
         '/Pavimento_Impreso7.png',
         '/Pavimento_Impreso8.png',
         '/Pavimento_Impreso9.png',
+        '/Pavimento_Impreso10.png',
+        '/Pavimento_Impreso11.png',
+        '/Pavimento_Impreso12.png',
       ],
     },
     {
@@ -58,7 +61,7 @@ export default function HomePage() {
         '/Muros_Fachadas1.png',
         '/Muros_Fachadas2.png',
         '/Muros_Fachadas3.png',
-        '/Muros_Fachadas4.png',
+        '/Muros_Fachadas4.png.jpg',
         { src: '/Video4.mp4', type: 'video' as const }, // Video 4 después de Muros fachadas 4
         '/Muros_Fachadas5.png',
         '/Muros_Fachadas6.png',
